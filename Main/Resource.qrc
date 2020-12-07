@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/resource/image">
+        <file>image/Copyright.PNG</file>
+        <file>image/TitleFile.png</file>
+        <file>image/exit_icon.png</file>
+        <file>image/fileopen_icon.png</file>
+        <file>image/filesave_icon.png</file>
+        <file>image/Circle_icon.png</file>
+        <file>image/brush_icon.png</file>
+        <file>image/eraser_icon.png</file>
+        <file>image/filenew_icon.png</file>
+        <file>image/rect_icon.png</file>
+        <file>image/text_icon.png</file>
+        <file>image/paint_icon.png</file>
+        <file>image/fill_icon.png</file>
+        <file>image/moive_icon.png</file>
+        <file>image/screen_icon.png</file>
+        <file>image/trash_png.ico</file>
+    </qresource>
+</RCC>
