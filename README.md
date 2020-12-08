@@ -13,7 +13,7 @@
 
 #### easylogo_dialog 
 
-![Image](Paint_project/output/image/N1.png)
+![Image](.\output\image\N1.PNG)
 
 
 
