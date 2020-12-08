@@ -52,6 +52,8 @@ namespace DataBox
         int circle_line_size;        // 동그라미 선 사이즈 -1이면 fill
 
         int brightness_value; // 밝기
+
+        bool camera_check ;
     public:
         void S_Choice_Button(CHOICE_BUTTON _choice){choice_button = _choice;}
         void S_Choice_Font(CHOICE_FONT _choice){choice_font = _choice;}
@@ -63,6 +65,7 @@ namespace DataBox
         void S_Text_Message(QString m){text_message = m;}
         void S_Straight_Line_Size(int n){straight_line_size = n;}
         void S_Brightness_Value(int n){brightness_value = n;}
+        void S_Camera_Check(bool n){camera_check = n;}
 
         CHOICE_BUTTON G_Choice_Button(){return choice_button;}
         CHOICE_FONT G_Choice_Font(){return choice_font;}
@@ -74,7 +77,7 @@ namespace DataBox
         int G_Circle_Size(){return circle_line_size;}
         int G_Straight_Line_Size(){return straight_line_size;}
         int G_Brightness_Value(){return brightness_value;}
-
+        bool G_Camera_Check(){return camera_check;}
     };
 
 #pragma endregion
@@ -142,6 +145,7 @@ public:
     void Set_Text(const QString value){_data->S_Text_Message(value);}
     void Set_Line(const int value){_data->S_Straight_Line_Size(value);}
     void Set_Brightness(const int value){_data->S_Brightness_Value(value);}
+    void Set_Camera_Check(const bool value) {_data->S_Camera_Check(value);}
 
     string Get_Text() {return _data->G_Text_Message();}
     int Get_Circle_Size(){return _data->G_Circle_Size();}
@@ -153,7 +157,7 @@ public:
     QColor Get_Brush_Color() {return _data->G_Brush_Color();}
     CHOICE_BUTTON Get_Switch_Mode(){return _data->G_Choice_Button();}
     CHOICE_FONT Get_Font_Mode(){return _data->G_Choice_Font();}
-
+    bool Get_Camera_Check(){return _data->G_Camera_Check();}
 };
 
 

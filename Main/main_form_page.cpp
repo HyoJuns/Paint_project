@@ -10,7 +10,7 @@ Main_Form_Page::Main_Form_Page(QWidget *parent) :QMainWindow(parent),    ui(new 
      ui->stackedWidget->addWidget(&_gr_info);
 
      ui->list_image->setCurrentRow(0);
-    connectList();
+     connectList();
 
 }
 
@@ -26,6 +26,9 @@ Main_Form_Page::~Main_Form_Page()
  */
 void Main_Form_Page::connectList()
 {
+    // 카메라 끄기
+    SingleTon_Paint::getInstance().Set_Camera_Check(false);
+
     // group_new Form과 신호 연결
     connect(&_gr_info,  SIGNAL(sigClicked()), this, SLOT(slot_new_file()));
     connect(&_gr_info,  SIGNAL(sigCancelClicked()), this, SLOT(slot_close()));
@@ -71,9 +74,8 @@ void Main_Form_Page::connectList()
         SingleTon_Paint::getInstance().Set_Text(ui->line_text->text());
     });
 
-
-
 }
+
 
 /*
  *  리스트에 추가할 목적으로 새로고침 형태
@@ -609,12 +611,17 @@ void Main_Form_Page::filter(cv::Mat img, cv::Mat& dst, cv::Mat mask)
     }
 }
 
+
+void Main_Form_Page::on_action_triggered()
+{
+     QMessageBox::warning(this, "Version","0.01ver ");
+}
 /*
  * 샤프닝
  */
-void Main_Form_Page::on_action_triggered()
+void Main_Form_Page::on_filter_Sype_triggered()
 {
-    QMessageBox::warning(this, "경고","이 기능은 불러온 파일만 가능합니다. ");
+    QMessageBox::warning(this, "경고","이 기능은 불러오기 파일만 가능합니다. ");
     if(ui->list_image->currentRow() < 0)
     {
         return;
@@ -643,4 +650,17 @@ void Main_Form_Page::on_action_triggered()
 
     cv::destroyWindow(image_name_vector[list_index].get_image_name());
     image_name_vector[list_index].Image_Show();
+}
+
+// 원본
+void Main_Form_Page::on_btn_origin_clicked()
+{
+   int list_index = ui->list_image->currentRow();
+
+   cv::Mat image = image_name_vector[list_index].get_origin_image_mat();
+
+   image_name_vector[list_index].Set_Met(image);
+
+   cv::destroyAllWindows();
+   image_name_vector[list_index].Image_Show();
 }

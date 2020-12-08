@@ -138,10 +138,13 @@
      <enum>QTabWidget::North</enum>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>4</number>
     </property>
     <property name="elideMode">
      <enum>Qt::ElideNone</enum>
+    </property>
+    <property name="usesScrollButtons">
+     <bool>true</bool>
     </property>
     <widget class="QWidget" name="tab_draw">
      <attribute name="icon">
@@ -195,6 +198,25 @@
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>90</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;무조건 브러쉬 버튼은 눌러주세요.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;List 목록에 있는 리스트 값을 더블클릭 누르면 화면이 나온다.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;화면이 나오면 왼쪽 마우스 클릭으로 브러쉬를 칠할 수 있다.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_eraser">
@@ -250,6 +272,23 @@
        </item>
       </layout>
      </widget>
+     <widget class="QTextBrowser" name="textBrowser_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>90</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;흰색으로 설정되어 있으며, 그림도 함께 지움&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_diagram">
      <attribute name="icon">
@@ -290,6 +329,9 @@
          <property name="maximum">
           <number>100</number>
          </property>
+         <property name="value">
+          <number>-1</number>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -303,6 +345,25 @@
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;-1은 채우기, 1 부터는 선 두께이다.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;마우스 한번 클릭 하고 또 한번 클릭하면 생성된다.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;원형도 마찬가지이다. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_text">
@@ -445,6 +506,28 @@
       </layout>
      </widget>
     </widget>
+    <widget class="QWidget" name="tab_movie">
+     <attribute name="icon">
+      <iconset resource="Resource.qrc">
+       <normaloff>:/resource/image/image/moive_icon.png</normaloff>:/resource/image/image/moive_icon.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string notr="true"/>
+     </attribute>
+     <widget class="QPushButton" name="btn_origin">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>원본 </string>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
@@ -473,9 +556,9 @@
    <widget class="QPushButton" name="btn_list_close">
     <property name="geometry">
      <rect>
-      <x>660</x>
+      <x>640</x>
       <y>340</y>
-      <width>111</width>
+      <width>131</width>
       <height>31</height>
      </rect>
     </property>
@@ -570,12 +653,13 @@
     <addaction name="filter_light"/>
     <addaction name="fliter_dark"/>
     <addaction name="fliter_reverse"/>
-    <addaction name="action"/>
+    <addaction name="filter_Sype"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
      <string>Help</string>
     </property>
+    <addaction name="action"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuFilter"/>
@@ -713,7 +797,10 @@
     <string>Shift+G</string>
    </property>
   </action>
-  <action name="action">
+  <action name="filter_Sype">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="Resource.qrc">
      <normaloff>:/resource/image/image/screen_icon.png</normaloff>:/resource/image/image/screen_icon.png</iconset>
@@ -723,6 +810,14 @@
    </property>
    <property name="shortcut">
     <string>Shift+H</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Version</string>
    </property>
   </action>
  </widget>

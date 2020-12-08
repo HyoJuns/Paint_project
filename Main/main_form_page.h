@@ -44,6 +44,8 @@ public:
 
     void connectList(); // 연결 리스트 목록
     void filter(cv::Mat, cv::Mat&, cv::Mat); // 회선이용
+
+
 signals:
     void onClickedSig(); // 시그널
 
@@ -107,12 +109,21 @@ private slots:
 
     void on_action_triggered();
 
+    void on_filter_Sype_triggered();
+
+
+    void on_btn_origin_clicked();
+
 private:
     Ui::Main_Form_Page *ui;
     MouseEventClass mec;
 
     group_new _gr_info;
     bool new_count = false;
+
+    double fps; // 프레임 수
+   int delay; // 지연시간
+   int fourcc; // 압축코덱
 
 };
 
