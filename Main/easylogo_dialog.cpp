@@ -1,7 +1,7 @@
 #include "easylogo_dialog.h"
 #include "ui_easylogo_dialog.h"
 
-
+// 생성자
 easylogo_Dialog::easylogo_Dialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::easylogo_Dialog)
@@ -9,6 +9,7 @@ easylogo_Dialog::easylogo_Dialog(QWidget *parent) :
     ui->setupUi(this);
 }
 
+// 소멸자
 easylogo_Dialog::~easylogo_Dialog()
 {
     delete ui;
@@ -82,6 +83,8 @@ void easylogo_Dialog::on_btn_open_clicked()
 // GitHub 버튼
 void easylogo_Dialog::on_btn_git_clicked()
 {
+    // 메세지박스 출력
     QMessageBox::information(this, "FireFox 여는중","https://github.com/HyoJuns/Paint_project" );
+    // GitHub Page Web Show
     system("firefox  https://github.com/HyoJuns/Paint_project");
 }

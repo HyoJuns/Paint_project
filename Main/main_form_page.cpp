@@ -1,5 +1,6 @@
 #include "main_form_page.h"
 #include "ui_main_form_page.h"
+// 싱글톤 실행하기 위한 함수
 bool SingleTon_Paint::destroyed = false;
 SingleTon_Paint* SingleTon_Paint::psing = 0;
 
@@ -10,6 +11,7 @@ Main_Form_Page::Main_Form_Page(QWidget *parent) :QMainWindow(parent),    ui(new 
      ui->stackedWidget->addWidget(&_gr_info);
 
      ui->list_image->setCurrentRow(0);
+     // 커넥트 이벤트 목록
      connectList();
 
 }
