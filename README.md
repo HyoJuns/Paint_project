@@ -11,6 +11,6 @@
 
 ### 개발 결과물 소개
 
-![image-20201208034605027](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20201208034605027.png)
+
 
 SystemProgram_Project
